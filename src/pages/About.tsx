@@ -1,4 +1,3 @@
-
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -35,13 +34,13 @@ const About = () => {
             </div>
             
             <div className="flex flex-wrap gap-4 mt-8">
-              <Button asChild className="btn-primary">
+              <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
                 <Link to="/contact">
                   Contact Me <Mail className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               
-              <Button asChild variant="outline" className="btn-outline">
+              <Button asChild variant="outline" className="btn-outline transform hover:scale-105 transition-transform duration-300">
                 <a href="/Samiksha_Resume.pdf" download>
                   Download CV <Download className="ml-2 h-4 w-4" />
                 </a>
@@ -51,10 +50,10 @@ const About = () => {
           
           <div className="order-1 lg:order-2">
             <div className="relative mx-auto max-w-md">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-portfolio-primary to-portfolio-secondary opacity-50 blur"></div>
-              <div className="relative rounded-lg overflow-hidden border-4 border-white shadow-xl">
+              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-portfolio-primary to-portfolio-secondary opacity-50 blur transform hover:scale-105 transition-all duration-300"></div>
+              <div className="relative rounded-lg overflow-hidden border-4 border-white shadow-xl transform hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/lovable-uploads/2976d132-1151-47f4-975b-2b56aec82015.png"
+                  src="/lovable-uploads/8b61ff36-7e90-4575-a570-46e9995664b0.png"
                   alt="Samiksha" 
                   className="w-full h-auto"
                 />

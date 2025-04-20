@@ -12,23 +12,23 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight animate-fade-in">
-              <span className="text-portfolio-primary">Hi, I'm Samiksha</span>
+              <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Hello, I'm Samiksha</span>
               <br />
-              <span className="text-slate-800">Data Analyst</span>
+              <span className="text-slate-800 hover:text-portfolio-primary transition-colors duration-300">Future Innovator</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-600 mt-6 animate-fade-in [animation-delay:200ms]">
+            <p className="text-lg md:text-xl text-slate-600 mt-6 animate-fade-in [animation-delay:200ms] hover:text-portfolio-primary transition-colors duration-300">
               Turning Data into Decisions, Ideas into Impact.
             </p>
             
             <div className="flex flex-wrap gap-4 mt-8 animate-fade-in [animation-delay:400ms]">
-              <Button asChild className="btn-primary">
+              <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
                 <Link to="/projects">
                   View Projects <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               
-              <Button asChild variant="outline" className="btn-outline">
+              <Button asChild variant="outline" className="btn-outline transform hover:scale-105 transition-transform duration-300">
                 <a href="/Samiksha_Resume.pdf" download>
                   Download CV <Download className="ml-2 h-4 w-4" />
                 </a>
@@ -40,7 +40,7 @@ export function Hero() {
                 href="https://github.com/mehtaSamiksha"
                 target="_blank"
                 rel="noreferrer"
-                className="bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors"
+                className="bg-slate-100 p-3 rounded-full hover:bg-portfolio-primary hover:text-white transform hover:scale-110 transition-all duration-300"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -49,14 +49,14 @@ export function Hero() {
                 href="https://linkedin.com/in/samiksha04"
                 target="_blank"
                 rel="noreferrer"
-                className="bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors"
+                className="bg-slate-100 p-3 rounded-full hover:bg-portfolio-primary hover:text-white transform hover:scale-110 transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="mailto:samiksha14087@gmail.com"
-                className="bg-slate-100 p-3 rounded-full hover:bg-slate-200 transition-colors"
+                className="bg-slate-100 p-3 rounded-full hover:bg-portfolio-primary hover:text-white transform hover:scale-110 transition-all duration-300"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -67,9 +67,9 @@ export function Hero() {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="w-full max-w-md relative">
               <div className="absolute inset-0 rounded-full bg-portfolio-primary opacity-20 blur-xl animate-pulse"></div>
-              <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square">
+              <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square transform hover:scale-105 transition-transform duration-300">
                 <img
-                  src="/lovable-uploads/2976d132-1151-47f4-975b-2b56aec82015.png"
+                  src="/lovable-uploads/8b61ff36-7e90-4575-a570-46e9995664b0.png"
                   alt="Samiksha"
                   className="w-full h-full object-cover"
                 />
