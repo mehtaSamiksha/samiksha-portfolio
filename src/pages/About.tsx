@@ -1,4 +1,3 @@
-
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -42,7 +41,11 @@ const About = () => {
               </Button>
               
               <Button asChild variant="outline" className="btn-outline transform hover:scale-105 transition-transform duration-300">
-                <a href="/Samiksha_Resume.pdf" download>
+                <a
+                  href="https://drive.google.com/file/d/103wYzFrBYeZzICqZ_zeAOBaPb4n-OGlp/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Download CV <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -146,4 +149,3 @@ const About = () => {
 };
 
 export default About;
-
