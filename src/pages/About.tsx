@@ -1,3 +1,4 @@
+
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
@@ -55,7 +56,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/8b61ff36-7e90-4575-a570-46e9995664b0.png"
                   alt="Samiksha" 
-                  className="w-full h-auto"
+                  className="w-full h-auto object-cover brightness-95 contrast-110 rounded-lg"
                 />
               </div>
             </div>
@@ -145,3 +146,4 @@ const About = () => {
 };
 
 export default About;
+
