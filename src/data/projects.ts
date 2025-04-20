@@ -19,7 +19,7 @@ export const projects: Project[] = [
     description: "A full-stack blogging platform with Flask and SQLite database where users can add, delete, and comment on blogs.",
     longDescription: "Developed a blogging platform where users can add, delete, and comments on blogs. Developed a full-stack application with dynamic data retrieval from Django, featuring a responsive design and dynamic pagination. Implemented RESTful APIs for data insertion, retrieval, and comments. Applied Python knowledge successfully to create a fully functional website.",
     technologies: ["Flask", "SQLite", "Python", "Django", "RESTful API", "HTML/CSS"],
-    githubUrl: "https://github.com/mehtaSamiksha/blogging-platform",
+    githubUrl: "https://github.com/mehtaSamiksha/Blog-mate",
     date: "October 2024",
     features: [
       "User authentication and individual user data storage",
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     description: "A classic Snake game with smooth movement, food consumption, and score tracking implemented with Java/Swing/JavaFX.",
     longDescription: "Developed a classic Snake game with smooth movement, food consumption, and score tracking. Implemented game-over screen for enhanced user experience using Java/Swing/JavaFX. Showcased skills in logic building, event handling, and basic game development.",
     technologies: ["Java", "Swing", "JavaFX", "Game Development"],
-    githubUrl: "https://github.com/mehtaSamiksha/snake-game",
+    githubUrl: "https://github.com/mehtaSamiksha/Java-Snake-Game-master",
     date: "September 2024",
     features: [
       "Smooth snake movement with keyboard controls",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     description: "A Python-based abbreviation program to efficiently generate and interpret abbreviations.",
     longDescription: "Designed a Python-based abbreviation program to efficiently generate and interpret abbreviations. Integrated string manipulation and data structures to improve abbreviation accuracy and retrieval speed. Enhanced user experience by incorporating input validation and a user-friendly interface for seamless interaction.",
     technologies: ["Python", "Data Structures", "String Manipulation"],
-    githubUrl: "https://github.com/mehtaSamiksha/abbreviation-generator",
+    githubUrl: "https://github.com/mehtaSamiksha/abbreviation_generator",
     date: "September 2023",
     features: [
       "Efficient abbreviation generation algorithm",
