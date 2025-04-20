@@ -1,13 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { Layout } from "@/components/layout/Layout";
+import { Hero } from "@/components/home/Hero";
+import { SkillsShowcase } from "@/components/home/SkillsShowcase";
+import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight, Mail } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout>
+      <Hero />
+      <SkillsShowcase />
+      <FeaturedProjects />
+      
+      {/* Call to Action Section */}
+      <section className="py-20 bg-portfolio-primary text-white">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+              Let's Work Together
+            </h2>
+            <p className="text-lg opacity-90 mb-8">
+              Interested in collaborating or have a project in mind? I'm always open to
+              discussing new opportunities and challenges.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild variant="outline" className="bg-white text-portfolio-primary border-white hover:bg-transparent hover:text-white">
+                <Link to="/contact">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Get in Touch
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-portfolio-primary">
+                <Link to="/projects">
+                  View All Projects
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
   );
 };
 
