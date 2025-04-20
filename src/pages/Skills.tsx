@@ -1,7 +1,20 @@
+
 import { Layout } from "@/components/layout/Layout";
 import { skillCategories } from "@/data/skills";
-import { Award, FlaskRound } from "lucide-react";
+import { Award, FlaskRound, FileCode, Code, Terminal, Laptop } from "lucide-react";
 import { motion } from "framer-motion";
+
+const getSkillIcon = (skillName: string) => {
+  const name = skillName.toLowerCase();
+  // Map skills to appropriate icons
+  if (name.includes('c++') || name.includes('java') || name.includes('python')) {
+    return <FileCode className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('sql') || name.includes('r')) {
+    return <Terminal className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else {
+    return <Code className="w-5 h-5 text-portfolio-primary mr-2" />;
+  }
+};
 
 const Skills = () => {
   return (
@@ -11,7 +24,6 @@ const Skills = () => {
         
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-center text-lg text-slate-600">
-            With expertise in programming languages, data analysis tools, and problem-solving techniques,
             I transform complex data into actionable insights that drive informed decision-making.
           </p>
         </div>
@@ -36,7 +48,10 @@ const Skills = () => {
                     viewport={{ once: true }}
                     className="skill-card"
                   >
-                    <h3 className="font-medium text-lg mb-3">{skill.name}</h3>
+                    <div className="flex items-center mb-3">
+                      {getSkillIcon(skill.name)}
+                      <h3 className="font-medium text-lg">{skill.name}</h3>
+                    </div>
                     {skill.level && (
                       <div className="w-full bg-gray-200 rounded-full h-2.5">
                         <div 
