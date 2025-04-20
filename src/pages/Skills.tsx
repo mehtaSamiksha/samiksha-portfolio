@@ -1,19 +1,56 @@
-
 import { Layout } from "@/components/layout/Layout";
 import { skillCategories } from "@/data/skills";
-import { Award, FlaskRound, FileCode, Code, Terminal, Laptop } from "lucide-react";
+import { 
+  Award, 
+  FlaskRound, 
+  FileCode, 
+  Code, 
+  Terminal, 
+  Database, 
+  GitBranch, 
+  BarChart,
+  Table,
+  Brain,
+  LineChart,
+  Binary,
+  Laptop 
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 const getSkillIcon = (skillName: string) => {
   const name = skillName.toLowerCase();
-  // Map skills to appropriate icons
-  if (name.includes('c++') || name.includes('java') || name.includes('python')) {
+  
+  // Programming Languages
+  if (name.includes('python')) {
     return <FileCode className="w-5 h-5 text-portfolio-primary mr-2" />;
-  } else if (name.includes('sql') || name.includes('r')) {
-    return <Terminal className="w-5 h-5 text-portfolio-primary mr-2" />;
-  } else {
+  } else if (name.includes('java')) {
+    return <Binary className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('c++') || name.includes('c')) {
     return <Code className="w-5 h-5 text-portfolio-primary mr-2" />;
   }
+  
+  // Data Analysis Tools
+  else if (name.includes('sql')) {
+    return <Database className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('excel')) {
+    return <Table className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('power bi') || name.includes('tableau')) {
+    return <BarChart className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('informatica')) {
+    return <LineChart className="w-5 h-5 text-portfolio-primary mr-2" />;
+  }
+  
+  // Other Skills
+  else if (name.includes('git')) {
+    return <GitBranch className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('problem-solving')) {
+    return <Brain className="w-5 h-5 text-portfolio-primary mr-2" />;
+  } else if (name.includes('analytics')) {
+    return <LineChart className="w-5 h-5 text-portfolio-primary mr-2" />;
+  }
+  
+  // Default icon for other skills
+  return <Code className="w-5 h-5 text-portfolio-primary mr-2" />;
 };
 
 const Skills = () => {
