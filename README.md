@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio repository. This portfolio is a refle
 
 ## 🔗 Live Site
 
-👉 **[View Portfolio Live](https://samiksha-data-impact-site.lovable.app/resume)**
+👉 **[View Portfolio Live](https://samiksha-data-impact-site.lovable.app/)**
 
 ---
 
