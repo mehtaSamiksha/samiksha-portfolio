@@ -1,9 +1,10 @@
-
 import { Link } from "react-router-dom";
-import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  const resumeUrl = "https://drive.google.com/file/d/103wYzFrBYeZzICqZ_zeAOBaPb4n-OGlp/view?usp=drive_link";
+
   return (
     <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none animated-bg opacity-5" />
@@ -21,21 +22,27 @@ export function Hero() {
               Turning Data into Decisions, Ideas into Impact.
             </p>
             
-            <div className="flex flex-wrap gap-4 mt-8 animate-fade-in [animation-delay:400ms]">
-              <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
-                <Link to="/projects">
-                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              
-              <Button asChild variant="outline" className="btn-outline transform hover:scale-105 transition-transform duration-300">
-                <a href="/Samiksha_Resume.pdf" download>
-                  Download CV <Download className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
+          <div className="flex flex-wrap gap-4 mt-8 animate-fade-in [animation-delay:400ms]">
+            <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
+              <Link to="/projects">
+                View Projects <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
             
-            <div className="mt-10 flex items-center gap-4 animate-fade-in [animation-delay:600ms]">
+            <Button 
+              asChild 
+              variant="outline" 
+              className="btn-outline transform hover:scale-105 transition-transform duration-300"
+              onClick={() => window.open(resumeUrl, '_blank')}
+            >
+              <div>
+                <FileText className="ml-2 h-4 w-4" />
+                View CV
+              </div>
+            </Button>
+          </div>
+          
+          <div className="mt-10 flex items-center gap-4 animate-fade-in [animation-delay:600ms]">
               <a
                 href="https://github.com/mehtaSamiksha"
                 target="_blank"

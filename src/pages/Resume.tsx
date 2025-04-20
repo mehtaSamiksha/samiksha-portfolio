@@ -1,9 +1,11 @@
 
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Linkedin } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const Resume = () => {
+  const resumeUrl = "https://drive.google.com/file/d/103wYzFrBYeZzICqZ_zeAOBaPb4n-OGlp/view?usp=drive_link";
+
   return (
     <Layout>
       <section className="section-container">
@@ -15,11 +17,15 @@ const Resume = () => {
               Download my resume to view my complete professional background,
               skills, education, and experience.
             </p>
-            <Button asChild className="btn-primary mx-auto">
-              <a href="/Samiksha_Resume.pdf" download>
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume (PDF)
-              </a>
+            <Button 
+              asChild 
+              className="btn-primary mx-auto"
+              onClick={() => window.open(resumeUrl, '_blank')}
+            >
+              <div>
+                <FileText className="mr-2 h-4 w-4" />
+                View Resume (PDF)
+              </div>
             </Button>
           </div>
 
