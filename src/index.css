@@ -95,27 +95,27 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-24;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-display font-bold mb-12 text-center relative;
+    @apply text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-8 md:mb-12 text-center relative;
     &::after {
       content: '';
-      @apply block w-20 h-1 bg-portfolio-primary mx-auto mt-4;
+      @apply block w-16 md:w-20 h-1 bg-portfolio-primary mx-auto mt-3 md:mt-4;
     }
   }
   
   .btn-primary {
-    @apply bg-portfolio-primary text-white px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg inline-flex items-center gap-2;
+    @apply w-full sm:w-auto bg-portfolio-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg inline-flex items-center justify-center gap-2;
   }
   
   .btn-outline {
-    @apply border-2 border-portfolio-primary text-portfolio-primary px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-portfolio-primary hover:text-white inline-flex items-center gap-2;
+    @apply w-full sm:w-auto border-2 border-portfolio-primary text-portfolio-primary px-4 sm:px-6 py-2 sm:py-3 rounded-md font-medium transition-all duration-300 hover:bg-portfolio-primary hover:text-white inline-flex items-center justify-center gap-2;
   }
   
   .nav-link {
-    @apply relative inline-flex items-center px-1 py-3 font-medium text-sm transition-colors duration-200 ease-in-out;
+    @apply relative inline-flex items-center px-1 py-2 md:py-3 font-medium text-sm transition-colors duration-200 ease-in-out;
     &::after {
       content: '';
       @apply absolute left-0 bottom-0 h-[2px] w-0 bg-portfolio-primary transition-all duration-300;
@@ -126,7 +126,7 @@
   }
   
   .skill-card {
-    @apply p-6 rounded-lg border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md;
+    @apply p-4 md:p-6 rounded-lg border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-md;
   }
   
   .project-card {
@@ -138,7 +138,7 @@
   }
   
   .input-field {
-    @apply w-full rounded-md border border-gray-300 px-4 py-3 text-sm focus:border-portfolio-primary focus:outline-none focus:ring-1 focus:ring-portfolio-primary;
+    @apply w-full rounded-md border border-gray-300 px-3 md:px-4 py-2 md:py-3 text-sm focus:border-portfolio-primary focus:outline-none focus:ring-1 focus:ring-portfolio-primary;
   }
 }
 

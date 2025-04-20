@@ -59,23 +59,23 @@ const Skills = () => {
       <section className="section-container">
         <h1 className="section-title">Skills & Tools</h1>
         
-        <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-center text-lg text-slate-600">
+        <div className="max-w-3xl mx-auto mb-16 px-4">
+          <p className="text-center text-base md:text-lg text-slate-600">
             I transform complex data into actionable insights that drive informed decision-making.
           </p>
         </div>
         
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           {skillCategories.map((category, index) => (
             <div key={category.id} className="skill-category">
-              <div className="flex items-center mb-8">
-                <div className="bg-portfolio-accent p-3 rounded-full mr-4">
-                  <category.icon className="h-6 w-6 text-portfolio-primary" />
+              <div className="flex items-center mb-6 md:mb-8 px-4">
+                <div className="bg-portfolio-accent p-2.5 md:p-3 rounded-full mr-3 md:mr-4">
+                  <category.icon className="h-5 w-5 md:h-6 md:w-6 text-portfolio-primary" />
                 </div>
-                <h2 className="text-2xl font-display font-semibold">{category.title}</h2>
+                <h2 className="text-xl md:text-2xl font-display font-semibold">{category.title}</h2>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 px-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div 
                     key={skill.name}
@@ -87,12 +87,12 @@ const Skills = () => {
                   >
                     <div className="flex items-center mb-3">
                       {getSkillIcon(skill.name)}
-                      <h3 className="font-medium text-lg">{skill.name}</h3>
+                      <h3 className="font-medium text-base md:text-lg">{skill.name}</h3>
                     </div>
                     {skill.level && (
-                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                      <div className="w-full bg-gray-200 rounded-full h-2 md:h-2.5">
                         <div 
-                          className="bg-portfolio-primary h-2.5 rounded-full" 
+                          className="bg-portfolio-primary h-2 md:h-2.5 rounded-full" 
                           style={{ width: `${(skill.level / 5) * 100}%` }}
                         ></div>
                       </div>
@@ -105,10 +105,10 @@ const Skills = () => {
         </div>
         
         {/* Additional Skills Section */}
-        <div className="mt-16 bg-slate-50 p-8 rounded-lg">
-          <h2 className="text-2xl font-display font-semibold mb-6">Additional Technical Skills</h2>
+        <div className="mt-12 md:mt-16 bg-slate-50 p-6 md:p-8 rounded-lg mx-4">
+          <h2 className="text-xl md:text-2xl font-display font-semibold mb-6">Additional Technical Skills</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div>
               <h3 className="font-medium text-lg mb-3 flex items-center">
                 <Award className="w-5 h-5 mr-2 text-portfolio-primary" />
