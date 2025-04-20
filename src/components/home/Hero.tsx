@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight, FileText, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,7 +15,6 @@ export function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight animate-fade-in">
               <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Hello, I'm Samiksha</span>
               <br />
-              <span className="text-slate-800 hover:text-portfolio-primary transition-colors duration-300">Future Innovator</span>
             </h1>
             
             <p className="text-lg md:text-xl text-slate-600 mt-6 animate-fade-in [animation-delay:200ms] hover:text-portfolio-primary transition-colors duration-300">
