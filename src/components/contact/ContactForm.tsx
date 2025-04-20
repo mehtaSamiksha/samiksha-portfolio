@@ -28,18 +28,16 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Send email using EmailJS
-      // Note: For this to work in production, you'll need to sign up for EmailJS and configure your service, template, and user IDs
       const result = await emailjs.send(
-        "service_portfolio", // Replace with your actual service ID once you've set up EmailJS
-        "template_contact", // Replace with your actual template ID once you've set up EmailJS
+        "service_or0f9tm", 
+        "template_dm1zebq", 
         {
           from_name: formData.name,
           reply_to: formData.email,
           message: formData.message,
           to_email: "samiksha14087@gmail.com",
         },
-        "YOUR_PUBLIC_KEY" // Replace with your actual EmailJS public key once you've set up EmailJS
+        "ggCnpAlboXrUI9iCE"
       );
 
       if (result.status === 200) {

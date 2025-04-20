@@ -1,4 +1,3 @@
-
 import { Layout } from "@/components/layout/Layout";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
@@ -7,10 +6,8 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   useEffect(() => {
-    // Initialize EmailJS with your user ID
-    // This is needed to use EmailJS without authentication
-    // Replace with your actual PUBLIC key when you set up EmailJS
-    emailjs.init("YOUR_PUBLIC_KEY");
+    // Initialize EmailJS with the public key
+    emailjs.init("ggCnpAlboXrUI9iCE");
   }, []);
 
   return (
