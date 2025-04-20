@@ -8,19 +8,6 @@ Welcome to my personal developer portfolio repository. This portfolio is a refle
 
 ---
 
-## 📌 Table of Contents
-
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Screenshots](#-screenshots)
-- [Project Structure](#-project-structure)
-- [How to Use](#-how-to-use)
-- [Future Plans](#-future-plans)
-- [Contact](#-contact)
-- [License](#-license)
-
----
-
 ## ✨ Features
 
 - 📱 **Responsive Design** – Optimized for desktop, tablet, and mobile.
