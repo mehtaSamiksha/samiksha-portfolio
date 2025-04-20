@@ -1,7 +1,7 @@
 
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { FileText, Github, Linkedin } from "lucide-react";
 
 const Resume = () => {
   const resumeUrl = "https://drive.google.com/file/d/103wYzFrBYeZzICqZ_zeAOBaPb4n-OGlp/view?usp=drive_link";
@@ -145,3 +145,4 @@ const Resume = () => {
 };
 
 export default Resume;
+
