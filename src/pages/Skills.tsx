@@ -2,7 +2,6 @@ import { Layout } from "@/components/layout/Layout";
 import { skillCategories } from "@/data/skills";
 import { Award, FlaskRound } from "lucide-react";
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 
 const Skills = () => {
   return (
@@ -27,7 +26,7 @@ const Skills = () => {
                 <h2 className="text-2xl font-display font-semibold">{category.title}</h2>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div 
                     key={skill.name}
@@ -35,11 +34,17 @@ const Skills = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
                     viewport={{ once: true }}
+                    className="skill-card"
                   >
-                    <Card className="p-6 text-center hover:shadow-md transition-shadow">
-                      <Award className="h-8 w-8 text-portfolio-primary mx-auto mb-3" />
-                      <h3 className="font-medium">{skill.name}</h3>
-                    </Card>
+                    <h3 className="font-medium text-lg mb-3">{skill.name}</h3>
+                    {skill.level && (
+                      <div className="w-full bg-gray-200 rounded-full h-2.5">
+                        <div 
+                          className="bg-portfolio-primary h-2.5 rounded-full" 
+                          style={{ width: `${(skill.level / 5) * 100}%` }}
+                        ></div>
+                      </div>
+                    )}
                   </motion.div>
                 ))}
               </div>
