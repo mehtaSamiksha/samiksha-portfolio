@@ -1,5 +1,6 @@
+
 import { Link } from "react-router-dom";
-import { ArrowRight, Download, Github, Linkedin, Mail, FileText } from "lucide-react";
+import { ArrowRight, FileText, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -22,27 +23,27 @@ export function Hero() {
               Turning Data into Decisions, Ideas into Impact.
             </p>
             
-          <div className="flex flex-wrap gap-4 mt-8 animate-fade-in [animation-delay:400ms]">
-            <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
-              <Link to="/projects">
-                View Projects <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <div className="flex flex-wrap gap-4 mt-8 animate-fade-in [animation-delay:400ms]">
+              <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
+                <Link to="/projects">
+                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              
+              <Button 
+                asChild 
+                variant="outline" 
+                className="btn-outline transform hover:scale-105 transition-transform duration-300"
+                onClick={() => window.open(resumeUrl, '_blank')}
+              >
+                <div>
+                  <FileText className="ml-2 h-4 w-4" />
+                  View CV
+                </div>
+              </Button>
+            </div>
             
-            <Button 
-              asChild 
-              variant="outline" 
-              className="btn-outline transform hover:scale-105 transition-transform duration-300"
-              onClick={() => window.open(resumeUrl, '_blank')}
-            >
-              <div>
-                <FileText className="ml-2 h-4 w-4" />
-                View CV
-              </div>
-            </Button>
-          </div>
-          
-          <div className="mt-10 flex items-center gap-4 animate-fade-in [animation-delay:600ms]">
+            <div className="mt-10 flex items-center gap-4 animate-fade-in [animation-delay:600ms]">
               <a
                 href="https://github.com/mehtaSamiksha"
                 target="_blank"
