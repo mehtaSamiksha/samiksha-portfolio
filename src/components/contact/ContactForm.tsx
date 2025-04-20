@@ -3,6 +3,9 @@ import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail } from "lucide-react";
 
 export function ContactForm() {
   const { toast } = useToast();
@@ -28,15 +31,19 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
+      // Configure the template parameters to match the EmailJS template
+      const templateParams = {
+        to_email: "samiksha14087@gmail.com", // Admin email
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        reply_to: formData.email,
+      };
+
       const result = await emailjs.send(
         "service_or0f9tm", 
         "template_dm1zebq", 
-        {
-          from_name: formData.name,
-          reply_to: formData.email,
-          message: formData.message,
-          to_email: "samiksha14087@gmail.com",
-        },
+        templateParams,
         "ggCnpAlboXrUI9iCE"
       );
 
@@ -66,14 +73,14 @@ export function ContactForm() {
         <label htmlFor="name" className="block text-sm font-medium mb-2">
           Name
         </label>
-        <input
+        <Input
           id="name"
           name="name"
           type="text"
           required
           value={formData.name}
           onChange={handleChange}
-          className="input-field"
+          className="w-full"
           placeholder="Your name"
         />
       </div>
@@ -82,14 +89,14 @@ export function ContactForm() {
         <label htmlFor="email" className="block text-sm font-medium mb-2">
           Email
         </label>
-        <input
+        <Input
           id="email"
           name="email"
           type="email"
           required
           value={formData.email}
           onChange={handleChange}
-          className="input-field"
+          className="w-full"
           placeholder="Your email address"
         />
       </div>
@@ -98,24 +105,31 @@ export function ContactForm() {
         <label htmlFor="message" className="block text-sm font-medium mb-2">
           Message
         </label>
-        <textarea
+        <Textarea
           id="message"
           name="message"
           rows={5}
           required
           value={formData.message}
           onChange={handleChange}
-          className="input-field resize-none"
+          className="w-full resize-none"
           placeholder="Your message"
         />
       </div>
 
       <Button
         type="submit"
-        className="w-full btn-primary"
+        className="w-full bg-portfolio-primary hover:bg-portfolio-secondary text-white flex items-center justify-center gap-2"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting ? (
+          "Sending..."
+        ) : (
+          <>
+            <Mail className="h-4 w-4" />
+            Send Message
+          </>
+        )}
       </Button>
     </form>
   );
