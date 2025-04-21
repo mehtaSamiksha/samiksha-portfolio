@@ -17,7 +17,7 @@ const About = () => {
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Hello! I'm Samiksha, a Computer Science and Engineering student at Lovely Professional University with a passion for data analysis and problem-solving. I'm on a journey to become a skilled data analyst who can turn complex data into actionable insights.
+                Hello! I'm Samiksha, pursuing a Bachelor of Technology in Computer Science and Engineering at Lovely Professional University with a passion for data analysis and problem-solving. I'm on a journey to become a skilled data analyst who can turn complex data into actionable insights.
               </p>
               
               <p>
