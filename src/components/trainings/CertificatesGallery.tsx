@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Maximize2 } from "lucide-react";
 
@@ -6,10 +7,10 @@ interface CertificateData {
   alt: string;
 }
 
-// Remove first image, keep only the two certificate images you want.
+// Updated first image with new certificate and removed any old first image references
 const certificates: CertificateData[] = [
   {
-    src: "/lovable-uploads/63124c74-030b-46a0-b6c6-7122d03d16df.png",
+    src: "/lovable-uploads/482c5f0c-1c43-4099-97e9-929cb97151a4.png",
     alt: "CipherSchools DSA Certificate",
   },
   {
@@ -35,7 +36,7 @@ export function CertificatesGallery() {
             grid 
             grid-cols-1 
             sm:grid-cols-2 
-            lg:grid-cols-2 
+            lg:grid-cols-3 
             gap-6 
             justify-items-center
             px-2
