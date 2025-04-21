@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { trainings } from "@/data/trainings";
 import { Calendar, Code } from "lucide-react";
 import { motion } from "framer-motion";
+import { CertificatesGallery } from "@/components/trainings/CertificatesGallery";
 
 const Trainings = () => {
   return (
@@ -17,7 +18,8 @@ const Trainings = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* Training Card(s) */}
+        <div className="max-w-4xl mx-auto mb-14">
           {trainings.map((training, index) => (
             <motion.div
               key={training.id}
@@ -61,6 +63,9 @@ const Trainings = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Certificates Section */}
+        <CertificatesGallery />
 
         {/* Training Benefits Section */}
         <div className="mt-12 bg-slate-50 p-8 rounded-lg max-w-4xl mx-auto">
