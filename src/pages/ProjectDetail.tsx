@@ -45,77 +45,79 @@ const ProjectDetail = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-3xl md:text-4xl font-display font-bold mb-6">
-              {project.title}
-            </h1>
-
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="bg-portfolio-accent text-portfolio-primary px-3 py-1 rounded-full text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            {project.image && (
-              <div className="mb-8 overflow-hidden rounded-lg border border-gray-200 shadow-md">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-auto"
-                />
-              </div>
-            )}
-
-            <div className="prose prose-slate max-w-none">
-              <h2 className="text-2xl font-display font-semibold mb-4">
-                Project Overview
-              </h2>
-              <p className="text-lg text-slate-600 mb-6">
-                {project.longDescription || project.description}
-              </p>
-
-              {project.features && (
-                <>
-                  <h2 className="text-2xl font-display font-semibold mb-4 mt-8">
-                    Key Features
-                  </h2>
-                  <ul className="space-y-2 list-disc pl-5 text-slate-600">
-                    {project.features.map((feature, index) => (
-                      <li key={index} className="text-lg">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-
-              <div className="flex flex-wrap gap-4 mt-12">
-                {project.githubUrl && (
-                  <Button asChild className="btn-primary">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
+            <div className="flex flex-col md:flex-row items-start gap-8">
+              {/* Text and description on the left */}
+              <div className="flex-1 min-w-0">
+                <h1 className="text-3xl md:text-4xl font-display font-bold mb-6">
+                  {project.title}
+                </h1>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-portfolio-accent text-portfolio-primary px-3 py-1 rounded-full text-sm font-medium"
                     >
-                      <Github className="mr-2 h-4 w-4" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                )}
-
-                {project.liveUrl && (
-                  <Button asChild variant="outline" className="btn-outline">
-                    <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                )}
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="prose prose-slate max-w-none">
+                  <h2 className="text-2xl font-display font-semibold mb-4">
+                    Project Overview
+                  </h2>
+                  <p className="text-lg text-slate-600 mb-6">
+                    {project.longDescription || project.description}
+                  </p>
+                  {project.features && (
+                    <>
+                      <h2 className="text-2xl font-display font-semibold mb-4 mt-8">
+                        Key Features
+                      </h2>
+                      <ul className="space-y-2 list-disc pl-5 text-slate-600">
+                        {project.features.map((feature, index) => (
+                          <li key={index} className="text-lg">
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  <div className="flex flex-wrap gap-4 mt-12">
+                    {project.githubUrl && (
+                      <Button asChild className="btn-primary">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          View on GitHub
+                        </a>
+                      </Button>
+                    )}
+                    {project.liveUrl && (
+                      <Button asChild variant="outline" className="btn-outline">
+                        <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </div>
               </div>
+              {/* Project image on the right with border and hover */}
+              {project.image && (
+                <div className="md:w-1/2 w-full flex justify-center items-start">
+                  <div className="w-full max-w-sm border-2 border-portfolio-primary rounded-md overflow-hidden shadow transition-transform duration-300 hover:scale-105 hover:shadow-xl group">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>
