@@ -7,7 +7,6 @@ interface CertificateData {
   alt: string;
 }
 
-// Updated first image with new certificate and removed any old first image references
 const certificates: CertificateData[] = [
   {
     src: "/lovable-uploads/482c5f0c-1c43-4099-97e9-929cb97151a4.png",
