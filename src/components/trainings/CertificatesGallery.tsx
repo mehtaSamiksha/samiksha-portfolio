@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Maximize2 } from "lucide-react";
 
+// Certificate images and alt text
 interface CertificateData {
   src: string;
   alt: string;
@@ -9,13 +10,14 @@ interface CertificateData {
 
 const certificates: CertificateData[] = [
   {
+    // If you want to replace certificate images, update this src:
     src: "/lovable-uploads/482c5f0c-1c43-4099-97e9-929cb97151a4.png",
     alt: "CipherSchools DSA Certificate",
   },
   {
     src: "/lovable-uploads/dbfb6360-d493-404e-9e1e-9f4bf9385674.png",
     alt: "CipherSchools C++ DSA Certificate",
-  }
+  },
 ];
 
 export function CertificatesGallery() {
@@ -32,34 +34,54 @@ export function CertificatesGallery() {
         </h2>
         <div
           className="
-            grid 
-            grid-cols-1 
-            sm:grid-cols-2 
-            lg:grid-cols-3 
-            gap-6 
+            grid
+            grid-cols-1
+            md:grid-cols-1
+            lg:grid-cols-2
+            gap-7
             justify-items-center
             px-2
+            max-w-2xl
+            lg:max-w-4xl
+            mx-auto
+            transition-all
           "
         >
           {certificates.map((cert, idx) => (
             <button
               key={cert.src}
               onClick={() => handleOpen(idx)}
-              className="group focus:outline-none w-full"
+              className="
+                group 
+                focus:outline-none 
+                w-full 
+                max-w-sm
+                rounded-2xl
+                transition
+                duration-200
+                hover:scale-105 
+                hover:shadow-xl 
+                focus:shadow-xl
+                bg-white
+                border 
+                border-gray-200
+                shadow
+                overflow-hidden
+                outline-none
+              "
               aria-label="View certificate"
               type="button"
             >
-              <div className="
-                relative w-full max-w-lg bg-white border border-gray-200 rounded-xl 
-                overflow-hidden shadow-sm transition-all duration-200 
-                hover:shadow-lg hover:scale-[1.035] group-focus:shadow-lg group-focus:scale-[1.035]
-              ">
+              <div className="relative w-full">
                 <img
                   src={cert.src}
                   alt={cert.alt}
-                  className="w-full aspect-video object-contain bg-slate-50 transition-transform duration-200"
+                  className="w-full aspect-video object-contain bg-slate-50 rounded-t-2xl"
                   loading="lazy"
-                  style={{ maxHeight: 270, minHeight: 170 }}
+                  style={{
+                    maxHeight: 270,
+                    minHeight: 170,
+                  }}
                 />
                 <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-80 group-focus:opacity-80 transition-opacity duration-200">
                   <div className="bg-white/90 rounded-full p-2 shadow border inline-flex">
@@ -67,6 +89,7 @@ export function CertificatesGallery() {
                   </div>
                 </div>
               </div>
+              {/* Optionally a certificate label could be added here */}
             </button>
           ))}
         </div>
@@ -103,3 +126,4 @@ export function CertificatesGallery() {
     </>
   );
 }
+
