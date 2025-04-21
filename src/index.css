@@ -167,3 +167,50 @@
     background-position: 0% 50%;
   }
 }
+
+/* Add smooth transition for theme changes */
+:root, .dark {
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s,
+    filter 0.3s;
+}
+
+/* Transition effect on the root when toggling theme */
+.theme-transition {
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s !important;
+}
+
+/* Ensure cards and nav react smoothly too */
+.card,
+.bg-white,
+.bg-slate-900,
+.bg-slate-50,
+.border,
+.section-container,
+.project-card,
+.certificate-card,
+.skill-card {
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+/* Optionally ensure text has a transition too */
+.text-portfolio-primary,
+.text-portfolio-secondary,
+.text-white,
+.text-slate-300,
+.text-slate-400,
+.text-slate-600 {
+  transition: color 0.3s;
+}
+
+/* Theme toggle focus */
+button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}

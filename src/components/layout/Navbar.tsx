@@ -1,9 +1,9 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -39,7 +39,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/95 backdrop-blur-sm border-b shadow-sm py-4"
+          ? "bg-white/95 dark:bg-slate-900/85 backdrop-blur-sm border-b shadow-sm py-4"
           : "bg-transparent py-6"
       )}
     >
@@ -67,23 +67,27 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </Button>
+        <div className="flex items-center gap-3">
+          {/* Theme Toggle Button */}
+          <ThemeToggle />
 
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </Button>
+        </div>
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-b shadow-lg py-4 md:hidden animate-fade-in">
+          <div className="absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b shadow-lg py-4 md:hidden animate-fade-in">
             <nav className="container flex flex-col space-y-3">
               {navItems.map((item) => (
                 <Link
@@ -105,4 +109,3 @@ export function Navbar() {
     </header>
   );
 }
-
