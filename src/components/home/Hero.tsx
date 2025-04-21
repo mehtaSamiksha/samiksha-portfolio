@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none animated-bg opacity-5" />
-      
+
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -17,18 +17,18 @@ export function Hero() {
               <span className="text-portfolio-primary hover:text-portfolio-secondary transition-colors duration-300">Hello, I'm Samiksha</span>
               <br />
             </h1>
-            
+
             <p className="text-lg md:text-xl text-slate-600 mt-6 animate-fade-in [animation-delay:200ms] hover:text-portfolio-primary transition-colors duration-300">
               Turning Data into Decisions, Ideas into Impact.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 mt-8 animate-fade-in [animation-delay:400ms]">
               <Button asChild className="btn-primary transform hover:scale-105 transition-transform duration-300">
                 <Link to="/projects">
                   View Projects <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              
+
               <Button 
                 asChild 
                 variant="outline" 
@@ -41,7 +41,7 @@ export function Hero() {
                 </div>
               </Button>
             </div>
-            
+
             <div className="mt-10 flex items-center gap-4 animate-fade-in [animation-delay:600ms]">
               <a
                 href="https://github.com/mehtaSamiksha"
@@ -70,9 +70,9 @@ export function Hero() {
               </a>
             </div>
           </div>
-          
-          <div className="order-1 lg:order-2 flex justify-center relative top-0 md:top-2 lg:top-4">
-            {/* Increased vertical offset for better face/forehead visibility */}
+
+          <div className="order-1 lg:order-2 flex justify-center relative top-8 md:top-12 lg:top-16">
+            {/* Moved image further down and adjusted objectPosition for more forehead */}
             <div className="w-full max-w-md relative">
               <div className="absolute inset-0 rounded-full bg-portfolio-primary opacity-20 blur-xl animate-pulse"></div>
               <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square transform hover:scale-105 transition-transform duration-300">
@@ -80,7 +80,7 @@ export function Hero() {
                   src="/lovable-uploads/8b61ff36-7e90-4575-a570-46e9995664b0.png"
                   alt="Samiksha"
                   className="w-full h-full object-cover object-top"
-                  style={{ objectPosition: "center 12%" }}
+                  style={{ objectPosition: "center 3%" }}
                 />
               </div>
             </div>
