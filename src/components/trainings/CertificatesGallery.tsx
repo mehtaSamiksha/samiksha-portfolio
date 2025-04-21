@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Maximize2 } from "lucide-react";
 
@@ -7,19 +6,16 @@ interface CertificateData {
   alt: string;
 }
 
+// Remove first image, keep only the two certificate images you want.
 const certificates: CertificateData[] = [
   {
-    src: "/lovable-uploads/8960aadf-0477-4064-b09c-96d6a950eead.png",
-    alt: "CipherSchools DSA Certificate 1",
+    src: "/lovable-uploads/63124c74-030b-46a0-b6c6-7122d03d16df.png",
+    alt: "CipherSchools DSA Certificate",
   },
   {
     src: "/lovable-uploads/dbfb6360-d493-404e-9e1e-9f4bf9385674.png",
-    alt: "CipherSchools DSA Certificate 2",
-  },
-  {
-    src: "/lovable-uploads/71a8f094-9bdb-4e57-926c-43da5b7dee7b.png",
-    alt: "CipherSchools DSA Certificate 3",
-  },
+    alt: "CipherSchools C++ DSA Certificate",
+  }
 ];
 
 export function CertificatesGallery() {
@@ -34,22 +30,36 @@ export function CertificatesGallery() {
         <h2 className="text-xl md:text-2xl font-display font-semibold mb-6 text-center">
           Certificates
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+        <div
+          className="
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-2 
+            gap-6 
+            justify-items-center
+            px-2
+          "
+        >
           {certificates.map((cert, idx) => (
             <button
               key={cert.src}
               onClick={() => handleOpen(idx)}
-              className="group focus:outline-none"
+              className="group focus:outline-none w-full"
               aria-label="View certificate"
               type="button"
             >
-              <div className="relative w-full max-w-sm bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:shadow-lg hover:scale-105 group-focus:shadow-lg group-focus:scale-105">
+              <div className="
+                relative w-full max-w-lg bg-white border border-gray-200 rounded-xl 
+                overflow-hidden shadow-sm transition-all duration-200 
+                hover:shadow-lg hover:scale-[1.035] group-focus:shadow-lg group-focus:scale-[1.035]
+              ">
                 <img
                   src={cert.src}
                   alt={cert.alt}
                   className="w-full aspect-video object-contain bg-slate-50 transition-transform duration-200"
                   loading="lazy"
-                  style={{ maxHeight: 250, minHeight: 170 }}
+                  style={{ maxHeight: 270, minHeight: 170 }}
                 />
                 <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-80 group-focus:opacity-80 transition-opacity duration-200">
                   <div className="bg-white/90 rounded-full p-2 shadow border inline-flex">
