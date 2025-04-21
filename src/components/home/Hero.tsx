@@ -71,7 +71,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 flex justify-center relative top-8 md:top-12 lg:top-16">
+          <div className="order-1 lg:order-2 flex justify-center relative top-0 md:top-2 lg:top-4">
             {/* Moved image further down and adjusted objectPosition for more forehead */}
             <div className="w-full max-w-md relative">
               <div className="absolute inset-0 rounded-full bg-portfolio-primary opacity-20 blur-xl animate-pulse"></div>
