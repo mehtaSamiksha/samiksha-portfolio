@@ -44,8 +44,11 @@ export function Navbar() {
       )}
     >
       <div className="container flex items-center justify-between">
-        <Link to="/" className="font-display text-xl md:text-2xl font-bold">
-          <span className="text-portfolio-primary">Samiksha</span>
+        <Link to="/" className="font-display text-xl md:text-2xl font-bold leading-tight">
+          <span className="text-portfolio-primary block">Samiksha</span>
+          <span className="text-sm text-portfolio-secondary font-medium mt-0.5 block leading-tight select-none">
+            Computer Science and Engineering Student
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -102,3 +105,4 @@ export function Navbar() {
     </header>
   );
 }
+
