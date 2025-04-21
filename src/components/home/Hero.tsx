@@ -71,7 +71,7 @@ export function Hero() {
             </div>
           </div>
           
-          <div className="order-1 lg:order-2 flex justify-center relative top-6"> {/* Moved down by adding top margin */}
+          <div className="order-1 lg:order-2 flex justify-center relative top-12 md:top-16 lg:top-24"> {/* Increased vertical offset for better face visibility */}
             <div className="w-full max-w-md relative">
               <div className="absolute inset-0 rounded-full bg-portfolio-primary opacity-20 blur-xl animate-pulse"></div>
               <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square transform hover:scale-105 transition-transform duration-300">
