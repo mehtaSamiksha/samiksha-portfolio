@@ -71,16 +71,17 @@ export function Hero() {
             </div>
           </div>
           
-         <div className="order-1 lg:order-2 flex justify-center relative top-0 md:top-2 lg:top-4">{/* Increased vertical offset for better face visibility */}
+          <div className="order-1 lg:order-2 flex justify-center relative top-8 md:top-14 lg:top-20">
+            {/* Increased vertical offset for better face/forehead visibility */}
             <div className="w-full max-w-md relative">
               <div className="absolute inset-0 rounded-full bg-portfolio-primary opacity-20 blur-xl animate-pulse"></div>
               <div className="relative rounded-full overflow-hidden border-4 border-white shadow-xl aspect-square transform hover:scale-105 transition-transform duration-300">
                 <img
-  src="/lovable-uploads/8b61ff36-7e90-4575-a570-46e9995664b0.png"
-  alt="Samiksha"
-  className="w-full h-full object-cover object-top"
-/>
-
+                  src="/lovable-uploads/8b61ff36-7e90-4575-a570-46e9995664b0.png"
+                  alt="Samiksha"
+                  className="w-full h-full object-cover object-top"
+                  style={{ objectPosition: "center 12%" }}
+                />
               </div>
             </div>
           </div>

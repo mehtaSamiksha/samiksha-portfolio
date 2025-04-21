@@ -15,7 +15,7 @@ export const certificates: Certificate[] = [
     title: "Programming in C++: A Hands-on Introduction",
     issuer: "Coursera - Codio",
     date: "May 2024",
-    image: "/lovable-uploads/ceae0505-6720-4618-bd80-7d65a3ba31a8.png",
+    image: "/lovable-uploads/ec999bcd-e87c-4364-8966-58f21f32176f.png",
     url: "https://www.coursera.org/account/accomplishments/specialization/RB9YX6DKFGMN",
     skills: ["C++ Basics", "Object-Oriented Programming", "Data Structures", "Algorithms"]
   },
@@ -24,7 +24,7 @@ export const certificates: Certificate[] = [
     title: "R Programming",
     issuer: "Coursera - Johns Hopkins University",
     date: "February 2024",
-    image: "/lovable-uploads/2d311a6e-da53-45f0-b934-505d283a52bd.png",
+    image: "/lovable-uploads/28eb12a7-9dad-49ed-9964-7c39aec00af2.png",
     url: "https://www.coursera.org/account/accomplishments/verify/KV9PYMUVD7YC",
     skills: ["R Programming", "Statistical Analysis", "Data Visualization", "Data Manipulation"]
   },
@@ -33,7 +33,7 @@ export const certificates: Certificate[] = [
     title: "Excel Skills for Business",
     issuer: "Coursera - Macquarie University",
     date: "April 2024",
-    image: "/lovable-uploads/2b55ebc1-a2a7-4149-ad59-d9df4779db85.png",
+    image: "/lovable-uploads/64222a57-e317-4653-8ff7-d5814eebfafe.png",
     url: "https://www.coursera.org/account/accomplishments/specialization/PL8B9LMCBK8K",
     skills: ["Advanced Excel", "Data Analysis", "Dashboard Creation", "Automation"]
   },
@@ -42,6 +42,7 @@ export const certificates: Certificate[] = [
     title: "Data Science: Foundations Using R",
     issuer: "Coursera - Johns Hopkins University",
     date: "March 2024",
+    image: "/lovable-uploads/28eb12a7-9dad-49ed-9964-7c39aec00af2.png",
     url: "https://www.coursera.org/account/accomplishments/verify/KV9PYMUVD7YC",
     skills: ["R Programming", "Data Analysis", "Statistical Inference", "Machine Learning Foundations"]
   }
